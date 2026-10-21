@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun Mama 🎉</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Musik Latar Utama -->
+  <audio src="lagu.mp3" id="laguUtama" loop preload="auto"></audio>
+
+  <div class="bg">
+
+    <!-- Halaman 1: Awal -->
+    <div id="page1" class="glass-container">
+      <img src="img/pesan.png" alt="Pesan" class="img-pesan" onclick="pindah(2)">
+      <p class="teks">mama mau buka pesannya?</p>
+      <button class="btn-utama" onclick="pindah(2)">buka ✨</button>
+    </div>
+
+    <!-- Halaman 2: Input Password -->
+    <div id="page2" class="glass-container password-box hidden">
+      <div class="password-icon">🔐</div>
+      <p class="teks" style="margin: 10px 0;">silahkan masukkan password-nya</p>
+      
+      <div class="input-group">
+        <input type="password" id="inputPass" class="input-pass" placeholder="Ketik Password...">
+      </div>
+      
+      <p class="note">💡 *password adalah tanggal lahir eshan dan adnan</p>
+      <p id="pesanError" class="error-msg hidden">masa tanggal lahir nya lupa☹️☹️</p>
+      
+      <button class="btn-utama" onclick="cekPassword()" style="margin-top: 20px; width: 100%;">Masuk ✨</button>
+    </div>
+
+    <!-- Halaman 3: Menu Utama (Selamat Ulang Tahun) -->
+    <div id="page3" class="glass-container hidden">
+    <p class="teks-menu">selamat ulang tahun mama 🥳</p>
+      <p class="subteks-menu">ada pesan nih untuk mama ❤️</p>
+         <img src="img/menu.png" alt="menu" class="img-display">
+      <div class="opsi-col">
+        <button class="btn-opsi" onclick="pindah(4)">pesan eshan ✉️</button>
+        <button class="btn-opsi" onclick="pindah(5)">pesan adnan ✉️</button>
+        <button class="btn-opsi" onclick="bukaHalamanVideo()">video 🎬</button>
+      </div>
+    </div>
+
+    <!-- Halaman 4: Pesan Eshan -->
+    <div id="page4" class="glass-container hidden">
+      <p class="teks-judul">pesan dari eshan</p>
+       <img src="img/gabut.webp" alt="Gabut" class="img-display">
+      <div class="scroll-teks">
+        <p>
+         Assalamualaikum warahmatullahi warahmatullahi...<br><br>
+          Happy birthday mamaku tercinta 🥳<br><br>
+          semoga mama sehat selalu, diberikan umur panjang dan diberikan keberkahan dari Allah SWT.🥰🥰🥰
+        </p>
+      </div>
+      <button class="btn-utama" onclick="pindah(3)">kembali ke menu 🔄</button>
+    </div>
+
+    <!-- Halaman 5: Pesan Adnan -->
+    <div id="page5" class="glass-container hidden">
+      <p class="teks-judul">pesan dari adnan</p>
+      <img src="img/bom.gif" alt="bom" class="img-display">
+      <div class="scroll-teks">
+        <p>
+          selamat ulang tahun yang ke 52 mama🎉<br><br>
+          terimakasih atas pengorbanan dan doa mama buat adnan selama ini, adnan bersyukur punya mama yang luar biasa🤩<br><br>
+          semoga di usia mama yang sekarang ini, mama diberikan kesehatan dan kebahagian terus ya, selalu full senyum kedepannyaa😇🫠
+        </p>
+      </div>
+      <button class="btn-utama" onclick="pindah(3)">kembali ke menu 🔄</button>
+    </div>
+
+    <!-- Halaman 6: Video -->
+    <div id="page6" class="glass-container video-box hidden">
+      <p class="teks-judul"></p>
+      
+      <!-- Pembungkus Video -->
+      <div class="video-wrapper">
+        <video id="videoSpesial" class="video-display" controls playsinline>
+          <source src="video.mp4" type="video/mp4">
+          Browser kamu tidak mendukung pemutaran video.
+        </video>
+      </div>
+
+      <!-- Tombol Perbesar & Kembali -->
+      <div class="opsi-col" style="margin-top: 15px;">
+        <button class="btn-opsi" onclick="perbesarVideo()">layar penuh (Fullscreen) ⛶</button>
+        <button class="btn-utama" onclick="kembaliDariVideo()" style="width: 100%;">kembali ke menu 🔄</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
